@@ -12,10 +12,14 @@ const lastScore = document.querySelector(".last-score");
 let scoreTxt = document.querySelector(".score-num");
 let score = 0;
 
+const timerTxt = document.querySelector(".timer");
+const remainingTime = document.querySelector(".remaining-seconds");
+
 //Random numbers on window loading.
 window.addEventListener("load", () => {
   guessOne.innerHTML = getRandom(101);
   guessTwo.innerHTML = getRandom(101);
+  countdownTimer();
 });
 
 //On up/down/equal button click, generate random numbers on both number boxes.
@@ -56,6 +60,7 @@ playAgain.addEventListener("click", () => {
   mainContainer.style.display = "block";
   gameOver.style.display = "none";
   score = 0;
+  location.reload();
 });
 
 //Re-usable functions
@@ -73,6 +78,20 @@ function failInit() {
 function scoreAdd() {
   score += 1;
   scoreTxt.innerHTML = score;
+}
+
+//Timer function
+function countdownTimer() {
+  let timeleft = 60;
+  const countdown = setInterval(function () {
+    if (timeleft <= 0) {
+      clearInterval(countdown);
+      timerTxt.innerHTML = "Time is up";
+    } else {
+      remainingTime.innerHTML = timeleft;
+    }
+    timeleft -= 1;
+  }, 1000);
 }
 
 /*function startInit() {

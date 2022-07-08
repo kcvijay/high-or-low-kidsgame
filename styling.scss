@@ -53,7 +53,8 @@ body {
 
       .score-box {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        text-align: right;
 
         .score-txt {
           font-size: 2rem;
@@ -64,6 +65,18 @@ body {
           .score-num {
             margin-left: 2rem;
             color: #006262;
+          }
+        }
+
+        .timer {
+          font-size: 1.6rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: rgb(98, 98, 98);
+
+          .remaining-seconds {
+            color: #006262;
+            margin-left: 2rem;
           }
         }
       }

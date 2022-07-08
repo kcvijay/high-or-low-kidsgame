@@ -64,9 +64,11 @@ body .main-container .game-container .score-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
 }
 
 body .main-container .game-container .score-box .score-txt {
@@ -79,6 +81,18 @@ body .main-container .game-container .score-box .score-txt {
 body .main-container .game-container .score-box .score-txt .score-num {
   margin-left: 2rem;
   color: #006262;
+}
+
+body .main-container .game-container .score-box .timer {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #626262;
+}
+
+body .main-container .game-container .score-box .timer .remaining-seconds {
+  color: #006262;
+  margin-left: 2rem;
 }
 
 body .main-container .game-container .guess-box-one {
