@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(blue), to(aqua));
+  background-image: linear-gradient(to bottom right, blue, aqua);
+  background-repeat: no-repeat;
+  color: #000;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+body .main-container {
+  height: 70vh;
+  width: 35rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+body .main-container .heading {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#010198), to(#006262));
+  background-image: linear-gradient(to bottom right, #010198, #006262);
+  padding: 2rem 0;
+  border: 3px solid #fff;
+  border-radius: 11px 11px 0 0;
+}
+
+body .main-container .game-container {
+  width: 35rem;
+  padding: 2rem;
+  background: #fff;
+  border: none;
+  border-radius: 0 0 11px 11px;
+  -webkit-box-shadow: 0 2.5rem 2.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2.5rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+body .main-container .game-container .score-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .main-container .game-container .score-box .score-txt {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #36b3f2;
+}
+
+body .main-container .game-container .score-box .score-txt .score-num {
+  margin-left: 2rem;
+  color: #006262;
+}
+
+body .main-container .game-container .guess-box-one {
+  height: 15rem;
+  width: 50%;
+  color: #c08c2d;
+  margin: 0 auto;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+body .main-container .game-container .guess-box-txt {
+  font-size: 2rem;
+  text-align: center;
+}
+
+body .main-container .game-container .container-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75%;
+  border-radius: 11px;
+  margin: 2rem auto;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#010198), to(#006262));
+  background-image: linear-gradient(to bottom right, #010198, #006262);
+}
+
+body .main-container .game-container .container-two .guess-box-two {
+  height: 10rem;
+  width: 75%;
+  margin: 3rem auto;
+  border-radius: 7px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: #e2e2e2;
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+body .main-container .game-container .container-two .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 5px solid #fff;
+  height: 100%;
+}
+
+body .main-container .game-container .container-two .arrows img {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+body .main-container .game-container .container-two .arrows img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body .game-over {
+  display: none;
+  position: fixed;
+  width: 35rem;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3d3d3d;
+  border-radius: 11px;
+  background-color: orange;
+  border: 5px solid orange;
+}
+
+body .game-over p {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body .game-over .game-over-msg {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+body .game-over .game-over-msg .last-score {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+body .game-over .play-again {
+  width: 100%;
+  border: none;
+  height: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+body .game-over .play-again:hover,
+body .game-over .play-again:active {
+  background-color: #d9d9d9;
+}
+/*# sourceMappingURL=styling.css.map */

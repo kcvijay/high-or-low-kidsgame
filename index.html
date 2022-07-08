@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIGH-OR-LOW GAME</title>
+
+    <link rel="stylesheet" href="/styling.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="heading">high or low</div>
+      <div class="game-container">
+        <div class="score-box">
+          <p class="score-txt">Score<span class="score-num">0</span></p>
+        </div>
+        <div class="guess-box-one"></div>
+        <!--<div class="guess-box-txt">
+          <p>This number is higher or lower than?</p>
+        </div> -->
+        <div class="container-two">
+          <div class="guess-box-two"></div>
+          <div class="arrows">
+            <img class="img-btn-up" src="/images/arrow-up.png" />
+            <img class="img-btn-equal" src="/images/equal.png" />
+            <img class="img-btn-down" src="/images/arrow-down.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="game-over">
+      <p>Ooops, Wrong!!</p>
+      <p class="game-over-msg">You scored<span class="last-score"></span></p>
+      <button class="play-again">Play again</button>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
