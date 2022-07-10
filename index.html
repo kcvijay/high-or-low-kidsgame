@@ -10,14 +10,22 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="heading">high or low</div>
+      <div class="heading">
+        <p>high or low</p>
+
+        <img
+          class="reload"
+          src="/images/reload.png"
+          width="35px"
+          height="35px"
+          alt="reload button"
+        />
+      </div>
       <div class="game-container">
         <div class="score-box">
           <p class="score-txt">Score<span class="score-num">0</span></p>
 
-          <p class="timer">
-            Time remaining: <span class="remaining-seconds"></span> seconds
-          </p>
+          <p class="timer">Remaining Time: 60 Seconds</p>
         </div>
         <div class="guess-box-one"></div>
         <!--<div class="guess-box-txt">
@@ -34,7 +42,7 @@
       </div>
     </div>
     <div class="game-over">
-      <p>Ooops, Wrong!!</p>
+      <p class="game-over-heading">Nope, Wrong!!</p>
       <p class="game-over-msg">You scored<span class="last-score"></span></p>
       <button class="play-again">Play again</button>
     </div>

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lilita One", "cursive", sans-serif;
   background-image: linear-gradient(to bottom right, blue, aqua);
   background-repeat: no-repeat;
   color: #000;
@@ -27,6 +26,10 @@ body {
     transition: 0.5s ease;
 
     .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -36,11 +39,23 @@ body {
       background-image: linear-gradient(
         to bottom right,
         rgb(1, 1, 152),
-        rgb(0, 98, 98)
+        rgb(6, 121, 121)
       );
-      padding: 2rem 0;
+
       border: 3px solid #fff;
       border-radius: 11px 11px 0 0;
+
+      .reload {
+        filter: brightness(2);
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .reload:active,
+      .reload:hover {
+        transform: scale(0.95);
+        filter: opacity(0.9);
+      }
     }
 
     .game-container {
@@ -72,19 +87,14 @@ body {
           font-size: 1.6rem;
           font-weight: 400;
           text-transform: capitalize;
-          color: rgb(98, 98, 98);
-
-          .remaining-seconds {
-            color: #006262;
-            margin-left: 2rem;
-          }
+          color: rgb(134, 134, 134);
         }
       }
 
       .guess-box-one {
         height: 15rem;
         width: 50%;
-        color: rgb(192, 140, 45);
+        color: #ffa500;
         margin: 0 auto;
         transition: 0.3s ease;
         font-size: 8rem;
@@ -153,7 +163,7 @@ body {
     display: none;
     position: fixed;
     width: 35rem;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -161,15 +171,13 @@ body {
     align-items: center;
     color: rgb(61, 61, 61);
     border-radius: 11px;
-
-    background-color: orange;
-    border: 5px solid orange;
+    background-color: #ffa500;
+    border: 5px solid #ffa500;
 
     p {
       font-size: 1.8rem;
       padding: 1rem 0;
       text-transform: uppercase;
-      font-weight: 700;
     }
 
     .game-over-msg {
@@ -177,7 +185,6 @@ body {
       font-size: 1.5rem;
 
       .last-score {
-        font-weight: 500;
         margin-left: 1rem;
       }
     }
@@ -187,7 +194,6 @@ body {
       border: none;
       height: 4rem;
       text-transform: uppercase;
-      font-weight: 500;
       border-radius: 7px;
       cursor: pointer;
     }
